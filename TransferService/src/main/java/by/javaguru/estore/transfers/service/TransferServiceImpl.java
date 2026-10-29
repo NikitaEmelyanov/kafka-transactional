@@ -30,6 +30,11 @@ public class TransferServiceImpl implements TransferService {
 		this.restTemplate = restTemplate;
 	}
 
+	/**
+	 * Метод, позволяющий отправлять в withdraw-money-topic информацию, сколько денег снять,
+	 * далее что-то производим на некотором удаленном сервисе после чего отправляем
+	 * информацию на deposit-money-topic сколько денег нужно положить
+	 */
 	@Override
 	public boolean transfer(TransferRestModel transferRestModel) {
 		WithdrawalRequestedEvent withdrawalEvent = new WithdrawalRequestedEvent(transferRestModel.getSenderId(),

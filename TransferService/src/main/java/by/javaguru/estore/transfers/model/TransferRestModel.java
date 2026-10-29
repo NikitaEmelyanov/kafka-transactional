@@ -2,6 +2,9 @@ package by.javaguru.estore.transfers.model;
 
 import java.math.BigDecimal;
 
+/**
+ * Сущность, содержащая информацию кому отправляем перевод и сколько отправляем
+ */
 public class TransferRestModel {
     private String senderId;
     private String recepientId;
